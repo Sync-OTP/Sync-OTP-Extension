@@ -1,0 +1,10 @@
+{
+  "name": "SOTP",
+  "description": "A web Extension that can fetch OTP from phone securly",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "alarms", "notifications"]
+}

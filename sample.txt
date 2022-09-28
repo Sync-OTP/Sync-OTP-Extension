@@ -1,0 +1,12 @@
+/*   "action": {
+    "default_icon": {
+      "16": "/images/favicon-16x16.png",
+      "48": "/images/android-chrome-512x512.png",
+      "128": "/images/android-chrome-192x192.png"
+    }
+  },
+  "icons": {
+    "16": "/images/favicon-16x16.png",
+    "48": "/images/android-chrome-512x512.png",
+    "128": "/images/android-chrome-192x192.png"
+  } */
