@@ -1,3 +1,4 @@
+import "./socket.io-client.js"
 chrome.runtime.onInstalled.addListener(() => {
     console.log("onInstalled...");
 
@@ -29,3 +30,10 @@ async function startRequest() {
     };
     chrome.notifications.create("", options);
 }
+
+
+
+const socket = io("http://3.109.56.163:8080/")
+socket.on("connect",() => {
+    console.log(`connected with id: ${socket.id} `)
+})
