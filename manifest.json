@@ -7,6 +7,15 @@
     "service_worker": "background.js",
     "type": "module"
   },
+
   "permissions": ["storage", "tabs", "alarms", "notifications"],
-  "action": { "default_popup": "popup.html", "default_title": "Cliceked mee" }
+  "action": {
+    "default_icon": {
+      "16": "./images/favicon.png",
+      "32": "./images/favicon.png",
+      "128": "./images/favicon.png"
+    },
+    "default_popup": "popup.html",
+    "default_title": "SOTP"
+  }
 }
