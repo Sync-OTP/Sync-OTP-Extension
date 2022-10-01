@@ -22,10 +22,27 @@ qrInput.addEventListener("keyup", () => {
         preValue = "";
     }
 });
+///
+////////////////////////////////
+//  PERSISTENT Storage - Globally
+//  Save data to storage across their browsers...
 
-chrome.storage.local.set({ "data": "awesome" }, function () {
+chrome.storage.sync.set({ "yourBody": "myBody" }, function(){
+    //  A data saved callback omg so fancy
 });
 
-chrome.storage.local.get(/* String or Array */["phasersTo"], function (items) {
-    qrInput = [{ "phasersTo": "awesome" }]
+chrome.storage.sync.get(/* String or Array */["yourBody"], function(items){
+    //  items = [ { "yourBody": "myBody" } ]
+});
+
+//  LOCAL Storage
+
+// Save data to storage locally, in just this browser...
+
+chrome.storage.local.set({ "phasersTo": "awesome" }, function(){
+    //  Data's been saved boys and girls, go on home
+});
+
+chrome.storage.local.get(/* String or Array */["phasersTo"], function(items){
+    //  items = [ { "phasersTo": "awesome" } ]
 });
