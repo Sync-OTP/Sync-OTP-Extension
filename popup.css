@@ -13,7 +13,7 @@
     justify-content: space-between;
     /* border: solid red 2px; */
     align-items: center;
-    background-color: #899ca93d;
+    background-color: #899ca9;
     padding: 10px 15px;
     margin: 0px 10px;
     border-radius: 10px;
@@ -33,7 +33,7 @@
     border-radius: 10px;
     background-color: #899ca9;
     margin: 0px 70px;
-    padding: 2px;
+    padding: 10px;
 }
 
 

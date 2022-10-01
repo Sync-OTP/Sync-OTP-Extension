@@ -24,3 +24,11 @@ qrInput.addEventListener("keyup", () => {
         preValue = "";
     }
 });
+
+chrome.storage.local.set({ "data": "awesome" }, function () {
+    //  Data's been saved boys and girls, go on home
+});
+
+chrome.storage.local.get(/* String or Array */["phasersTo"], function (items) {
+    qrInput = [ { "phasersTo": "awesome" } ]
+});
