@@ -5,8 +5,8 @@
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js",
-    "type":"module"
+    "type": "module"
   },
-  "permissions": ["storage","tabs", "alarms", "notifications"],
+  "permissions": ["storage", "tabs", "alarms", "notifications"],
   "action": { "default_popup": "popup.html", "default_title": "Cliceked mee" }
 }

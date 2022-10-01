@@ -1,8 +1,6 @@
 import "./socket.io-client.js"
 chrome.runtime.onInstalled.addListener(() => {
     console.log("onInstalled...");
-
-    // create alarm after extension is installed / upgraded
     chrome.alarms.create("startRequest", { periodInMinutes: 30 });
     startRequest();
 });
@@ -16,11 +14,6 @@ async function startRequest() {
     const newData = await response.json();
     const data = `${newData.content} —${newData.author}`;
 
-    // const cocktailName = newData.content;
-    // const heading = document.createElement("otpdata");
-    // heading.innerHTML = data;
-    // otpdataH1.appendChild(heading);
-
     var options = {
         title: "Your OTP is",
         message: data,
@@ -30,8 +23,6 @@ async function startRequest() {
     };
     chrome.notifications.create("", options);
 }
-
-
 
 const socket = io("http://3.109.56.163:8080/")
 socket.on("connect",() => {
